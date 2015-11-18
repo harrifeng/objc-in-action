@@ -8,7 +8,8 @@ CFLAGS=-Wall
 LDFLAGS=$(LIBRARIES) $(FRAMEWORKS)
 OUT=-o main.exe
 
-objects = main.o BNRPerson.o
+SRCS = main.m BNRPerson.m
+OBJS = $(SRCS:.m=.o)
 
 run:all
 	@echo "-------------------------------------"
@@ -23,11 +24,12 @@ run:all
     sed 's,\($*\)\.o[ :]*,\1.o $@ : ,g' < $@.$$$$ > $@; \
     rm -f $@.$$$$
 
--include $(objects:.o=.d)
+-include $(OBJS:.o=.d)
 
-all: $(objects)
-	$(CC) $(CFLAGS) $(LDFLAGS) $(objects) $(OUT)
+all: $(OBJS)
+	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS) $(OUT)
 
 .PHONY : all clean run
 clean:
+	@echo "-------------------------------------"
 	-rm main.exe *.o *.d

@@ -15,7 +15,6 @@ int main(int argc, const char * argv[])
         // Log some values using custom methods
         float bmi = [mikey bodyMassIndex];
         NSLog(@"mikey has a BMI of %f", bmi);
-        NSLog(@"Hw");
 
     }
     return 0;
