@@ -21,5 +21,7 @@ objects = main.o BNRPerson.o
 
 all: $(objects)
 	$(CC) $(CFLAGS) $(LDFLAGS) $(objects) $(OUT)
+
+.PHONY : clean
 clean:
-	rm -rf main.exe *.o
+	rm main.exe $(objects)
