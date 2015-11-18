@@ -30,4 +30,4 @@ all: $(objects)
 
 .PHONY : all clean run
 clean:
-	-rm main.exe $(objects)
+	-rm main.exe *.o *.d
