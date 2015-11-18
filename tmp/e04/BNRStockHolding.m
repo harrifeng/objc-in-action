@@ -2,6 +2,17 @@
 
 @implementation BNRStockHolding
 
+- (void)setPurchaseSharedPrice:(float) p
+{
+    _purchaseSharePrice = p;
+}
+
+- (void)setCurrentSharedPrice:(float) c
+{
+    _currentSharePrice = c;
+
+}
+
 - (float)costInDollars
 {
     return 1.0;

@@ -8,7 +8,7 @@ CFLAGS=-Wall
 LDFLAGS=$(LIBRARIES) $(FRAMEWORKS)
 OUT=-o main.exe
 
-SRCS = main.m BNRStockHolding.m
+SRCS = BNRStockHolding.m main.m
 OBJS = $(SRCS:.m=.o)
 
 run:all
