@@ -6,8 +6,6 @@ CC=clang # or gcc
 FRAMEWORKS:= -framework Foundation
 LIBRARIES:= -lobjc
 
-SOURCE=main.m
-
 CFLAGS=-Wall
 LDFLAGS=$(LIBRARIES) $(FRAMEWORKS)
 OUT=-o main.exe
@@ -22,6 +20,6 @@ objects = main.o BNRPerson.o
 all: $(objects)
 	$(CC) $(CFLAGS) $(LDFLAGS) $(objects) $(OUT)
 
-.PHONY : clean
+.PHONY : all clean run
 clean:
-	rm main.exe $(objects)
+	-rm main.exe $(objects)
