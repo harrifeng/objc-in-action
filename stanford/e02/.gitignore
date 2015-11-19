@@ -2,3 +2,4 @@ main.dSYM
 *.d
 *.o
 *.exe
+*.d.*
