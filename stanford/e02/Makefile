@@ -8,7 +8,7 @@ CFLAGS=-Wall
 LDFLAGS=$(LIBRARIES) $(FRAMEWORKS)
 OUT=-o main.exe
 
-SRCS = main.m Deck.m Card.m
+SRCS = main.m Deck.m Card.m PlayingCard.m
 OBJS = $(SRCS:.m=.o)
 
 run:all
